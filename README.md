@@ -1,0 +1,175 @@
+[![npm package](https://badge.fury.io/js/ts-mdast.svg)](https://www.npmjs.com/package/ts-mdast)
+[![License](https://img.shields.io/github/license/slune-org/ts-mdast.svg)](https://github.com/slune-org/ts-mdast/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/slune-org/ts-mdast.svg?branch=master)](https://travis-ci.org/slune-org/ts-mdast)
+[![Coverage Status](https://coveralls.io/repos/github/slune-org/ts-mdast/badge.svg?branch=master)](https://coveralls.io/github/slune-org/ts-mdast?branch=master)
+[![Issues](https://img.shields.io/github/issues/slune-org/ts-mdast.svg)](https://github.com/slune-org/ts-mdast/issues)
+
+# ts-mdast - Typescript utilities for Markdown Abstract Syntax Tree
+
+This package provides utilities to work with `Markdown` abstract syntax tree (_MDAST_). It contains:
+
+- functions to create the different node types (also useful in pure _Javascript_);
+- type guard and assertion functions to ensure the node is of expected type (especially useful with _Typescript_).
+
+This package also re-export all types of `@types/mdast` and type of `@types/unist` which are useful for `Markdown`. It is therefore not necessary to include those packages if you are using this one.
+
+# Language/langue
+
+Documents, messages, code (including variable names and comments), are in English.
+
+Anyway, because Slune is French firm, all documents and important messages must also be provided in French. Other translations are welcome.
+
+:fr: Une version française de ce document se trouve [ici](doc/fr/README.md).
+
+# Installation
+
+Installation is done using `npm install` command:
+
+```bash
+$ npm install --save ts-mdast
+```
+
+# Usage
+
+For each _NodeType_ node type, the package contains :
+
+- an `assertNodeType(node: Node)` function raising an exception if `node` is not of type _NodeType_ ;
+- an `isNodeType(node: Node)` function returning `true` if `node` is of type _NodeType_ ;
+- a `createNodeType(...)` function creating a node of type _NodeType_.
+
+The first two functions are understood by _Typescript_ which is after able to control the node type in an appropriate way.
+
+The creation function is used this as following:
+
+    createNodeType(mandatory1, mandatory2 [, optional1 [, optional2 [, optional3]] | {optional1, optional2, optional3}] [, children])
+
+where `mandatory_` represent the mandatory parameters, `optional_` the optional parameters and `children` an array with child nodes. Following calls are therefore possible:
+
+```typescript
+createNodeType(mandatory1, mandatory2, optional1, [child1, child2])
+createNodeType(mandatory1, mandatory2, optional1, optional2)
+createNodeType(mandatory1, mandatory2, { optional1, optional3 })
+createNodeType(mandatory1, mandatory2, { optional2, optional3 }, [child1, child2])
+createNodeType(mandatory1, mandatory2, [child1, child2])
+```
+
+The array containing children is directly used in the node and can therefore be modified after node creation:
+
+```typescript
+const children: Content[] = []
+createNodeType(mandatory1, mandatory2, children)
+children.push(createNodeType(mandatory1, mandatory2))
+```
+
+**Notes:**
+
+- The `createNodeType(...)` function only exists for concrete nodes (not on `Content` nor `BlockContent` for example).
+- All node types do not have mandatory parameters, optional parameters or child nodes.
+
+## Nodes
+
+### Parent
+
+Reference: [Parent](https://github.com/syntax-tree/mdast#parent)
+
+TODO
+
+### Literal
+
+Reference: [Literal](https://github.com/syntax-tree/mdast#literal)
+
+TODO
+
+### Root
+
+Reference: [Root](https://github.com/syntax-tree/mdast#root)
+
+Type assertion:
+
+```typescript
+function assertRoot(node: Node): asserts node is Root
+```
+
+Type guard:
+
+```typescript
+function isRoot(node: Node): node is Root
+```
+
+Creation:
+
+```typescript
+function createRoot(children?: Content[]): Root
+```
+
+### Paragraph
+
+Reference: [Paragraph](https://github.com/syntax-tree/mdast#paragraph)
+
+Type assertion:
+
+```typescript
+function assertParagraph(node: Node): asserts node is Paragraph
+```
+
+Type guard:
+
+```typescript
+function isParagraph(node: Node): node is Paragraph
+```
+
+Creation:
+
+```typescript
+function createParagraph(children?: PhrasingContent[]): Paragraph
+```
+
+### Heading
+
+Reference: [Heading](https://github.com/syntax-tree/mdast#heading)
+
+Type assertion:
+
+```typescript
+function assertHeading(node: Node): asserts node is Heading
+```
+
+Type guard:
+
+```typescript
+function isHeading(node: Node): node is Heading
+```
+
+Creation:
+
+```typescript
+function createHeading(depth: 1 | 2 | 3 | 4 | 5 | 6, children?: PhrasingContent[])
+```
+
+### ThematicBreak
+
+Reference: [ThematicBreak](https://github.com/syntax-tree/mdast#thematicbreak)
+
+Type assertion:
+
+```typescript
+function assertHeading(node: Node): asserts node is Heading
+```
+
+Type guard:
+
+```typescript
+function isHeading(node: Node): node is Heading
+```
+
+Creation:
+
+```typescript
+function createThematicBreak(): ThematicBreak
+```
+
+# Contributing
+
+Even though we cannot guarantee a response time, please feel free to file an issue if you have any question or problem using the package.
+
+_Pull Requests_ are welcome. You can, of course, submit corrections or improvements for code, but do not hesitate to also improve documentation, even for small spell or grammar errors.
