@@ -25,8 +25,8 @@ $ npm install --save ts-mdast
 
 Pour chaque type de nœud _NodeType_, le paquet contient :
 
-- une fonction `assertNodeType(node: Node)` qui lève une exception si `node` n'est pas de type _NodeType_ ;
-- une fonction `isNodeType(node: Node)` qui renvoie `true` si `node` est de type _NodeType_ ;
+- une fonction `assertNodeType(node: Node)` qui lève une exception si `node` n'est pas de type *NodeType* ;
+- une fonction `isNodeType(node: Node)` qui renvoie `true` si `node` est de type *NodeType* ;
 - une fonction `createNodeType(...)` qui crée un nœud de type _NodeType_.
 
 Les deux premières fonctions sont comprises par _Typescript_ qui est donc capable par la suite de contrôler le type de nœud de façon appropriée.
@@ -145,19 +145,41 @@ Référence : [ThematicBreak](https://github.com/syntax-tree/mdast#thematicbrea
 Assertion de type :
 
 ```typescript
-function assertHeading(node: Node): asserts node is Heading
+function assertThematicBreak(node: Node): asserts node is ThematicBreak
 ```
 
 Contrôle de type :
 
 ```typescript
-function isHeading(node: Node): node is Heading
+function isThematicBreak(node: Node): node is ThematicBreak
 ```
 
 Création :
 
 ```typescript
 function createThematicBreak(): ThematicBreak
+```
+
+### Blockquote
+
+Référence : [Blockquote](https://github.com/syntax-tree/mdast#blockquote)
+
+Assertion de type :
+
+```typescript
+function assertBlockquote(node: Node): asserts node is Blockquote
+```
+
+Contrôle de type :
+
+```typescript
+function isBlockquote(node: Node): node is Blockquote
+```
+
+Création :
+
+```typescript
+function createBlockquote(children?: BlockContent[]): Blockquote
 ```
 
 # Contribuer
