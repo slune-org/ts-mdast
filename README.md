@@ -409,6 +409,38 @@ function createDefinition(
 ): Definition
 ```
 
+### FootnoteDefinition
+
+Reference: [FootnoteDefinition](https://github.com/syntax-tree/mdast#footnotedefinition)
+
+Type assertion:
+
+```typescript
+function assertFootnoteDefinition(node: Node): asserts node is FootnoteDefinition
+```
+
+Type guard:
+
+```typescript
+function isFootnoteDefinition(node: Node): node is FootnoteDefinition
+```
+
+Creation:
+
+```typescript
+function createFootnoteDefinition(
+  identifier: string,
+  label: string,
+  children?: BlockContent[]
+): FootnoteDefinition
+function createFootnoteDefinition(identifier: string, children?: BlockContent[]): FootnoteDefinition
+function createFootnoteDefinition(
+  identifier: string,
+  options: { label?: string },
+  children?: BlockContent[]
+): FootnoteDefinition
+```
+
 # Contributing
 
 Even though we cannot guarantee a response time, please feel free to file an issue if you have any question or problem using the package.
