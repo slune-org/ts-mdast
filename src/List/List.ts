@@ -44,7 +44,7 @@ export function createList(ordered: boolean, children?: ListContent[]): List
 export function createList(children?: ListContent[]): List
 
 /**
- * @param options - The options of the list item.
+ * @param options - The options of the list.
  * @param children - The children of the list.
  * @returns The list.
  */
