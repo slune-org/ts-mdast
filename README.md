@@ -357,7 +357,7 @@ Creation:
 
 ```typescript
 function createCode(value: string, lang?: string, meta?: string): Code
-function createCode(value: string, options: Options): Code
+function createCode(value: string, options: { lang?: string; meta?: string }): Code
 ```
 
 ### YAML
@@ -380,6 +380,33 @@ Creation:
 
 ```typescript
 function createYAML(value: string): YAML
+```
+
+### Definition
+
+Reference: [Definition](https://github.com/syntax-tree/mdast#definition)
+
+Type assertion:
+
+```typescript
+function assertDefinition(node: Node): asserts node is Definition
+```
+
+Type guard:
+
+```typescript
+function isDefinition(node: Node): node is Definition
+```
+
+Creation:
+
+```typescript
+function createDefinition(identifier: string, url: string, label?: string, title?: string): Definition
+function createDefinition(
+  identifier: string,
+  url: string,
+  options: { label?: string; title?: string }
+): Definition
 ```
 
 # Contributing
