@@ -190,6 +190,57 @@ Creation:
 function createBlockquote(children?: BlockContent[]): Blockquote
 ```
 
+### List
+
+Reference: [List](https://github.com/syntax-tree/mdast#list)
+
+Type assertion:
+
+```typescript
+function assertList(node: Node): asserts node is List
+```
+
+Type guard:
+
+```typescript
+function isList(node: Node): node is List
+```
+
+Creation:
+
+```typescript
+function createList(ordered: boolean, start: number, spread: boolean, children?: ListContent[]): List
+function createList(ordered: boolean, start: number, children?: ListContent[]): List
+function createList(ordered: boolean, children?: ListContent[]): List
+function createList(children?: ListContent[]): List
+function createList(options: Options, children?: ListContent[]): List
+```
+
+### ListItem
+
+Reference: [ListItem](https://github.com/syntax-tree/mdast#listitem)
+
+Type assertion:
+
+```typescript
+function assertListItem(node: Node): asserts node is ListItem
+```
+
+Type guard:
+
+```typescript
+function isListItem(node: Node): node is ListItem
+```
+
+Creation:
+
+```typescript
+function createListItem(checked: boolean, spread: boolean, children?: BlockContent[]): ListItem
+function createListItem(checked: boolean, children?: BlockContent[]): ListItem
+function createListItem(children?: BlockContent[]): ListItem
+function createListItem(options: Options, children?: BlockContent[]): ListItem
+```
+
 # Contributing
 
 Even though we cannot guarantee a response time, please feel free to file an issue if you have any question or problem using the package.

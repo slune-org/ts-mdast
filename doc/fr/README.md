@@ -182,6 +182,57 @@ Création :
 function createBlockquote(children?: BlockContent[]): Blockquote
 ```
 
+### List
+
+Référence : [List](https://github.com/syntax-tree/mdast#list)
+
+Assertion de type :
+
+```typescript
+function assertList(node: Node): asserts node is List
+```
+
+Contrôle de type :
+
+```typescript
+function isList(node: Node): node is List
+```
+
+Création :
+
+```typescript
+function createList(ordered: boolean, start: number, spread: boolean, children?: ListContent[]): List
+function createList(ordered: boolean, start: number, children?: ListContent[]): List
+function createList(ordered: boolean, children?: ListContent[]): List
+function createList(children?: ListContent[]): List
+function createList(options: Options, children?: ListContent[]): List
+```
+
+### ListItem
+
+Référence : [ListItem](https://github.com/syntax-tree/mdast#listitem)
+
+Assertion de type :
+
+```typescript
+function assertListItem(node: Node): asserts node is ListItem
+```
+
+Contrôle de type :
+
+```typescript
+function isListItem(node: Node): node is ListItem
+```
+
+Création :
+
+```typescript
+function createListItem(checked: boolean, spread: boolean, children?: BlockContent[]): ListItem
+function createListItem(checked: boolean, children?: BlockContent[]): ListItem
+function createListItem(children?: BlockContent[]): ListItem
+function createListItem(options: Options, children?: BlockContent[]): ListItem
+```
+
 # Contribuer
 
 Bien que nous ne puissions pas garantir un temps de réponse, n’hésitez pas à ouvrir un incident si vous avez une question ou un problème pour utiliser ce paquet.
