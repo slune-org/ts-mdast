@@ -307,6 +307,28 @@ Création :
 function createTableCell(children?: PhrasingContent[]): TableCell
 ```
 
+### HTML
+
+Référence : [HTML](https://github.com/syntax-tree/mdast#html)
+
+Assertion de type :
+
+```typescript
+function assertHTML(node: Node): asserts node is HTML
+```
+
+Contrôle de type :
+
+```typescript
+function isHTML(node: Node): node is HTML
+```
+
+Création :
+
+```typescript
+function createHTML(value: string): HTML
+```
+
 # Contribuer
 
 Bien que nous ne puissions pas garantir un temps de réponse, n’hésitez pas à ouvrir un incident si vous avez une question ou un problème pour utiliser ce paquet.
