@@ -352,6 +352,28 @@ function createCode(value: string, lang?: string, meta?: string): Code
 function createCode(value: string, options: Options): Code
 ```
 
+### YAML
+
+Référence : [YAML](https://github.com/syntax-tree/mdast#yaml)
+
+Assertion de type :
+
+```typescript
+function assertYAML(node: Node): asserts node is YAML
+```
+
+Contrôle de type :
+
+```typescript
+function isYAML(node: Node): node is YAML
+```
+
+Création :
+
+```typescript
+function createYAML(value: string): YAML
+```
+
 # Contribuer
 
 Bien que nous ne puissions pas garantir un temps de réponse, n’hésitez pas à ouvrir un incident si vous avez une question ou un problème pour utiliser ce paquet.
