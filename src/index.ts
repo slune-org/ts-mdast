@@ -6,6 +6,7 @@ export { createFootnote, isFootnote } from './Footnote'
 export { createFootnoteReference, isFootnoteReference } from './FootnoteReference'
 
 export { assertBlockquote, createBlockquote, isBlockquote } from './Blockquote'
+export { assertCode, createCode, isCode } from './Code'
 export { assertHeading, createHeading, isHeading } from './Heading'
 export { assertHTML, createHTML, isHTML } from './HTML'
 export { assertList, createList, isList } from './List'

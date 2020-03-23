@@ -337,6 +337,29 @@ Creation:
 function createHTML(value: string): HTML
 ```
 
+### Code
+
+Reference: [Code](https://github.com/syntax-tree/mdast#code)
+
+Type assertion:
+
+```typescript
+function assertCode(node: Node): asserts node is Code
+```
+
+Type guard:
+
+```typescript
+function isCode(node: Node): node is Code
+```
+
+Creation:
+
+```typescript
+function createCode(value: string, lang?: string, meta?: string): Code
+function createCode(value: string, options: Options): Code
+```
+
 # Contributing
 
 Even though we cannot guarantee a response time, please feel free to file an issue if you have any question or problem using the package.
