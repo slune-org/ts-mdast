@@ -205,7 +205,10 @@ function createList(ordered: boolean, start: number, spread: boolean, children?:
 function createList(ordered: boolean, start: number, children?: ListContent[]): List
 function createList(ordered: boolean, children?: ListContent[]): List
 function createList(children?: ListContent[]): List
-function createList(options: Options, children?: ListContent[]): List
+function createList(
+  options: { ordered?: boolean; start?: number; spread?: boolean },
+  children?: ListContent[]
+): List
 ```
 
 ### ListItem
@@ -230,7 +233,78 @@ Création :
 function createListItem(checked: boolean, spread: boolean, children?: BlockContent[]): ListItem
 function createListItem(checked: boolean, children?: BlockContent[]): ListItem
 function createListItem(children?: BlockContent[]): ListItem
-function createListItem(options: Options, children?: BlockContent[]): ListItem
+function createListItem(
+  options: { checked?: boolean; spread?: boolean },
+  children?: BlockContent[]
+): ListItem
+```
+
+### Table
+
+Référence : [Table](https://github.com/syntax-tree/mdast#table)
+
+Assertion de type :
+
+```typescript
+function assertTable(node: Node): asserts node is Table
+```
+
+Contrôle de type :
+
+```typescript
+function isTable(node: Node): node is Table
+```
+
+Création :
+
+```typescript
+function createTable(align: AlignType[], children?: TableContent[]): Table
+function createTable(children?: TableContent[]): Table
+function createTable(options: { align?: AlignType[] }, children?: TableContent[]): Table
+```
+
+### TableRow
+
+Référence : [TableRow](https://github.com/syntax-tree/mdast#tablerow)
+
+Assertion de type :
+
+```typescript
+function assertTableRow(node: Node): asserts node is TableRow
+```
+
+Contrôle de type :
+
+```typescript
+function isTableRow(node: Node): node is TableRow
+```
+
+Création :
+
+```typescript
+function createTableRow(children?: RowContent[]): TableRow
+```
+
+### TableCell
+
+Référence : [TableCell](https://github.com/syntax-tree/mdast#tablecell)
+
+Assertion de type :
+
+```typescript
+function assertTableCell(node: Node): asserts node is TableCell
+```
+
+Contrôle de type :
+
+```typescript
+function isTableCell(node: Node): node is TableCell
+```
+
+Création :
+
+```typescript
+function createTableCell(children?: PhrasingContent[]): TableCell
 ```
 
 # Contribuer
