@@ -433,6 +433,28 @@ function createFootnoteDefinition(
 ): FootnoteDefinition
 ```
 
+### Text
+
+Référence : [Text](https://github.com/syntax-tree/mdast#text)
+
+Assertion de type :
+
+```typescript
+function assertText(node: Node): asserts node is Text
+```
+
+Contrôle de type :
+
+```typescript
+function isText(node: Node): node is Text
+```
+
+Création :
+
+```typescript
+function createText(value: string): Text
+```
+
 # Contribuer
 
 Bien que nous ne puissions pas garantir un temps de réponse, n’hésitez pas à ouvrir un incident si vous avez une question ou un problème pour utiliser ce paquet.
