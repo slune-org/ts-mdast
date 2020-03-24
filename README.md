@@ -80,6 +80,22 @@ Reference: [Literal](https://github.com/syntax-tree/mdast#literal)
 
 TODO
 
+### ListContent
+
+Reference: [ListContent](https://github.com/syntax-tree/mdast#listcontent)
+
+Type assertion:
+
+```typescript
+function assertListContent(node: Node): asserts node is ListContent
+```
+
+Type guard:
+
+```typescript
+function isListContent(node: Node): node is ListContent
+```
+
 ### TableContent
 
 Reference: [TableContent](https://github.com/syntax-tree/mdast#tablecontent)
