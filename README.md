@@ -658,6 +658,38 @@ function createLinkReference(
 ): LinkReference
 ```
 
+### ImageReference
+
+Reference: [ImageReference](https://github.com/syntax-tree/mdast#imagereference)
+
+Type assertion:
+
+```typescript
+function assertImageReference(node: Node): asserts node is ImageReference
+```
+
+Type guard:
+
+```typescript
+function isImageReference(node: Node): node is ImageReference
+```
+
+Creation:
+
+```typescript
+function createImageReference(
+  identifier: string,
+  referenceType: ReferenceType,
+  alt?: string,
+  label?: string
+): ImageReference
+function createImageReference(
+  identifier: string,
+  referenceType: ReferenceType,
+  options: { alt?: string; label?: string }
+): ImageReference
+```
+
 # Contributing
 
 Even though we cannot guarantee a response time, please feel free to file an issue if you have any question or problem using the package.

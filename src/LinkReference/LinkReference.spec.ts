@@ -74,10 +74,10 @@ describe('LinkReference', () => {
     expect(root.children).to.exist.and.to.have.lengthOf(1)
     const paragraph = (root.children as Node[])[0]
     expect(paragraph.children).to.exist.and.to.have.lengthOf(1)
-    const list = (paragraph.children as Node[])[0]
+    const reference = (paragraph.children as Node[])[0]
     expect(isLinkReference(root)).to.be.false
     expect(() => assertLinkReference(root)).to.throw(/Node is not a LinkReference/)
-    expect(isLinkReference(list)).to.be.true
-    expect(() => assertLinkReference(list)).not.to.throw()
+    expect(isLinkReference(reference)).to.be.true
+    expect(() => assertLinkReference(reference)).not.to.throw()
   })
 })
