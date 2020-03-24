@@ -8,17 +8,20 @@ export { createFootnoteReference, isFootnoteReference } from './FootnoteReferenc
 export { assertBlockquote, createBlockquote, isBlockquote } from './Blockquote'
 export { assertCode, createCode, isCode } from './Code'
 export { assertDefinition, createDefinition, isDefinition } from './Definition'
+export { assertDelete, createDelete, isDelete } from './Delete'
 export {
   assertFootnoteDefinition,
   createFootnoteDefinition,
   isFootnoteDefinition,
 } from './FootnoteDefinition'
+export { assertEmphasis, createEmphasis, isEmphasis } from './Emphasis'
 export { assertHeading, createHeading, isHeading } from './Heading'
 export { assertHTML, createHTML, isHTML } from './HTML'
 export { assertList, createList, isList } from './List'
 export { assertListItem, createListItem, isListItem } from './ListItem'
 export { assertParagraph, createParagraph, isParagraph } from './Paragraph'
 export { assertRoot, createRoot, isRoot } from './Root'
+export { assertStrong, createStrong, isStrong } from './Strong'
 export { assertTable, createTable, isTable } from './Table'
 export { assertTableCell, createTableCell, isTableCell } from './TableCell'
 export { assertTableRow, createTableRow, isTableRow } from './TableRow'

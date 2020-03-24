@@ -463,6 +463,72 @@ Creation:
 function createText(value: string): Text
 ```
 
+### Emphasis
+
+Reference: [Emphasis](https://github.com/syntax-tree/mdast#emphasis)
+
+Type assertion:
+
+```typescript
+function assertEmphasis(node: Node): asserts node is Emphasis
+```
+
+Type guard:
+
+```typescript
+function isEmphasis(node: Node): node is Emphasis
+```
+
+Creation:
+
+```typescript
+function createEmphasis(children?: PhrasingContent[]): Emphasis
+```
+
+### Strong
+
+Reference: [Strong](https://github.com/syntax-tree/mdast#strong)
+
+Type assertion:
+
+```typescript
+function assertStrong(node: Node): asserts node is Strong
+```
+
+Type guard:
+
+```typescript
+function isStrong(node: Node): node is Strong
+```
+
+Creation:
+
+```typescript
+function createStrong(children?: PhrasingContent[]): Strong
+```
+
+### Delete
+
+Reference: [Delete](https://github.com/syntax-tree/mdast#delete)
+
+Type assertion:
+
+```typescript
+function assertDelete(node: Node): asserts node is Delete
+```
+
+Type guard:
+
+```typescript
+function isDelete(node: Node): node is Delete
+```
+
+Creation:
+
+```typescript
+function createDelete(children?: PhrasingContent[]): Delete
+```
+
 # Contributing
 
 Even though we cannot guarantee a response time, please feel free to file an issue if you have any question or problem using the package.
