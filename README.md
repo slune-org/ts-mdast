@@ -80,6 +80,54 @@ Reference: [Literal](https://github.com/syntax-tree/mdast#literal)
 
 TODO
 
+### RowContent
+
+Reference: [RowContent](https://github.com/syntax-tree/mdast#rowcontent)
+
+Type assertion:
+
+```typescript
+function assertRowContent(node: Node): asserts node is RowContent
+```
+
+Type guard:
+
+```typescript
+function isRowContent(node: Node): node is RowContent
+```
+
+### PhrasingContent
+
+Reference: [PhrasingContent](https://github.com/syntax-tree/mdast#phrasingcontent)
+
+Type assertion:
+
+```typescript
+function assertPhrasingContent(node: Node): asserts node is PhrasingContent
+```
+
+Type guard:
+
+```typescript
+function isPhrasingContent(node: Node): node is PhrasingContent
+```
+
+### StaticPhrasingContent
+
+Reference: [StaticPhrasingContent](https://github.com/syntax-tree/mdast#staticphrasingcontent)
+
+Type assertion:
+
+```typescript
+function assertStaticPhrasingContent(node: Node): asserts node is StaticPhrasingContent
+```
+
+Type guard:
+
+```typescript
+function isStaticPhrasingContent(node: Node): node is StaticPhrasingContent
+```
+
 ### Root
 
 Reference: [Root](https://github.com/syntax-tree/mdast#root)
