@@ -315,6 +315,426 @@ Creation:
 function createTableCell(children?: PhrasingContent[]): TableCell
 ```
 
+### HTML
+
+Reference: [HTML](https://github.com/syntax-tree/mdast#html)
+
+Type assertion:
+
+```typescript
+function assertHTML(node: Node): asserts node is HTML
+```
+
+Type guard:
+
+```typescript
+function isHTML(node: Node): node is HTML
+```
+
+Creation:
+
+```typescript
+function createHTML(value: string): HTML
+```
+
+### Code
+
+Reference: [Code](https://github.com/syntax-tree/mdast#code)
+
+Type assertion:
+
+```typescript
+function assertCode(node: Node): asserts node is Code
+```
+
+Type guard:
+
+```typescript
+function isCode(node: Node): node is Code
+```
+
+Creation:
+
+```typescript
+function createCode(value: string, lang?: string, meta?: string): Code
+function createCode(value: string, options: { lang?: string; meta?: string }): Code
+```
+
+### YAML
+
+Reference: [YAML](https://github.com/syntax-tree/mdast#yaml)
+
+Type assertion:
+
+```typescript
+function assertYAML(node: Node): asserts node is YAML
+```
+
+Type guard:
+
+```typescript
+function isYAML(node: Node): node is YAML
+```
+
+Creation:
+
+```typescript
+function createYAML(value: string): YAML
+```
+
+### Definition
+
+Reference: [Definition](https://github.com/syntax-tree/mdast#definition)
+
+Type assertion:
+
+```typescript
+function assertDefinition(node: Node): asserts node is Definition
+```
+
+Type guard:
+
+```typescript
+function isDefinition(node: Node): node is Definition
+```
+
+Creation:
+
+```typescript
+function createDefinition(identifier: string, url: string, label?: string, title?: string): Definition
+function createDefinition(
+  identifier: string,
+  url: string,
+  options: { label?: string; title?: string }
+): Definition
+```
+
+### FootnoteDefinition
+
+Reference: [FootnoteDefinition](https://github.com/syntax-tree/mdast#footnotedefinition)
+
+Type assertion:
+
+```typescript
+function assertFootnoteDefinition(node: Node): asserts node is FootnoteDefinition
+```
+
+Type guard:
+
+```typescript
+function isFootnoteDefinition(node: Node): node is FootnoteDefinition
+```
+
+Creation:
+
+```typescript
+function createFootnoteDefinition(
+  identifier: string,
+  label: string,
+  children?: BlockContent[]
+): FootnoteDefinition
+function createFootnoteDefinition(identifier: string, children?: BlockContent[]): FootnoteDefinition
+function createFootnoteDefinition(
+  identifier: string,
+  options: { label?: string },
+  children?: BlockContent[]
+): FootnoteDefinition
+```
+
+### Text
+
+Reference: [Text](https://github.com/syntax-tree/mdast#text)
+
+Type assertion:
+
+```typescript
+function assertText(node: Node): asserts node is Text
+```
+
+Type guard:
+
+```typescript
+function isText(node: Node): node is Text
+```
+
+Creation:
+
+```typescript
+function createText(value: string): Text
+```
+
+### Emphasis
+
+Reference: [Emphasis](https://github.com/syntax-tree/mdast#emphasis)
+
+Type assertion:
+
+```typescript
+function assertEmphasis(node: Node): asserts node is Emphasis
+```
+
+Type guard:
+
+```typescript
+function isEmphasis(node: Node): node is Emphasis
+```
+
+Creation:
+
+```typescript
+function createEmphasis(children?: PhrasingContent[]): Emphasis
+```
+
+### Strong
+
+Reference: [Strong](https://github.com/syntax-tree/mdast#strong)
+
+Type assertion:
+
+```typescript
+function assertStrong(node: Node): asserts node is Strong
+```
+
+Type guard:
+
+```typescript
+function isStrong(node: Node): node is Strong
+```
+
+Creation:
+
+```typescript
+function createStrong(children?: PhrasingContent[]): Strong
+```
+
+### Delete
+
+Reference: [Delete](https://github.com/syntax-tree/mdast#delete)
+
+Type assertion:
+
+```typescript
+function assertDelete(node: Node): asserts node is Delete
+```
+
+Type guard:
+
+```typescript
+function isDelete(node: Node): node is Delete
+```
+
+Creation:
+
+```typescript
+function createDelete(children?: PhrasingContent[]): Delete
+```
+
+### InlineCode
+
+Reference: [InlineCode](https://github.com/syntax-tree/mdast#inlinecode)
+
+Type assertion:
+
+```typescript
+function assertInlineCode(node: Node): asserts node is InlineCode
+```
+
+Type guard:
+
+```typescript
+function isInlineCode(node: Node): node is InlineCode
+```
+
+Creation:
+
+```typescript
+function createInlineCode(value: string): InlineCode
+```
+
+### Break
+
+Reference: [Break](https://github.com/syntax-tree/mdast#break)
+
+Type assertion:
+
+```typescript
+function assertBreak(node: Node): asserts node is Break
+```
+
+Type guard:
+
+```typescript
+function isBreak(node: Node): node is Break
+```
+
+Creation:
+
+```typescript
+function createBreak(): Break
+```
+
+### Link
+
+Reference: [Link](https://github.com/syntax-tree/mdast#link)
+
+Type assertion:
+
+```typescript
+function assertLink(node: Node): asserts node is Link
+```
+
+Type guard:
+
+```typescript
+function isLink(node: Node): node is Link
+```
+
+Creation:
+
+```typescript
+function createLink(url: string, title: string, children?: StaticPhrasingContent[]): Link
+function createLink(url: string, children?: StaticPhrasingContent[]): Link
+function createLink(url: string, options: { title?: string }, children?: StaticPhrasingContent[]): Link
+```
+
+### Image
+
+Reference: [Image](https://github.com/syntax-tree/mdast#image)
+
+Type assertion:
+
+```typescript
+function assertImage(node: Node): asserts node is Image
+```
+
+Type guard:
+
+```typescript
+function isImage(node: Node): node is Image
+```
+
+Creation:
+
+```typescript
+function createImage(url: string, alt?: string, title?: string): Image
+function createImage(url: string, options: { alt?: string; title?: string }): Image
+```
+
+### LinkReference
+
+Reference: [LinkReference](https://github.com/syntax-tree/mdast#linkreference)
+
+Type assertion:
+
+```typescript
+function assertLinkReference(node: Node): asserts node is LinkReference
+```
+
+Type guard:
+
+```typescript
+function isLinkReference(node: Node): node is LinkReference
+```
+
+Creation:
+
+```typescript
+function createLinkReference(
+  identifier: string,
+  referenceType: ReferenceType,
+  label: string,
+  children?: StaticPhrasingContent[]
+): LinkReference
+function createLinkReference(
+  identifier: string,
+  referenceType: ReferenceType,
+  children?: StaticPhrasingContent[]
+): LinkReference
+function createLinkReference(
+  identifier: string,
+  referenceType: ReferenceType,
+  options: { label?: string },
+  children?: StaticPhrasingContent[]
+): LinkReference
+```
+
+### ImageReference
+
+Reference: [ImageReference](https://github.com/syntax-tree/mdast#imagereference)
+
+Type assertion:
+
+```typescript
+function assertImageReference(node: Node): asserts node is ImageReference
+```
+
+Type guard:
+
+```typescript
+function isImageReference(node: Node): node is ImageReference
+```
+
+Creation:
+
+```typescript
+function createImageReference(
+  identifier: string,
+  referenceType: ReferenceType,
+  alt?: string,
+  label?: string
+): ImageReference
+function createImageReference(
+  identifier: string,
+  referenceType: ReferenceType,
+  options: { alt?: string; label?: string }
+): ImageReference
+```
+
+### Footnote
+
+Reference: [Footnote](https://github.com/syntax-tree/mdast#footnote)
+
+Type assertion:
+
+```typescript
+function assertFootnote(node: Node): asserts node is Footnote
+```
+
+Type guard:
+
+```typescript
+function isFootnote(node: Node): node is Footnote
+```
+
+Creation:
+
+```typescript
+function createFootnote(children?: PhrasingContent[]): Footnote
+```
+
+### FootnoteReference
+
+Reference: [FootnoteReference](https://github.com/syntax-tree/mdast#footnotereference)
+
+Type assertion:
+
+```typescript
+function assertFootnoteReference(node: Node): asserts node is FootnoteReference
+```
+
+Type guard:
+
+```typescript
+function isFootnoteReference(node: Node): node is FootnoteReference
+```
+
+Creation:
+
+```typescript
+function createFootnoteReference(identifier: string, label?: string): FootnoteReference
+function createFootnoteReference(identifier: string, options: { label?: string }): FootnoteReference
+```
+
 # Contributing
 
 Even though we cannot guarantee a response time, please feel free to file an issue if you have any question or problem using the package.

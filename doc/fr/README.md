@@ -307,6 +307,426 @@ Création :
 function createTableCell(children?: PhrasingContent[]): TableCell
 ```
 
+### HTML
+
+Référence : [HTML](https://github.com/syntax-tree/mdast#html)
+
+Assertion de type :
+
+```typescript
+function assertHTML(node: Node): asserts node is HTML
+```
+
+Contrôle de type :
+
+```typescript
+function isHTML(node: Node): node is HTML
+```
+
+Création :
+
+```typescript
+function createHTML(value: string): HTML
+```
+
+### Code
+
+Référence : [Code](https://github.com/syntax-tree/mdast#code)
+
+Assertion de type :
+
+```typescript
+function assertCode(node: Node): asserts node is Code
+```
+
+Contrôle de type :
+
+```typescript
+function isCode(node: Node): node is Code
+```
+
+Création :
+
+```typescript
+function createCode(value: string, lang?: string, meta?: string): Code
+function createCode(value: string, options: { lang?: string; meta?: string }): Code
+```
+
+### YAML
+
+Référence : [YAML](https://github.com/syntax-tree/mdast#yaml)
+
+Assertion de type :
+
+```typescript
+function assertYAML(node: Node): asserts node is YAML
+```
+
+Contrôle de type :
+
+```typescript
+function isYAML(node: Node): node is YAML
+```
+
+Création :
+
+```typescript
+function createYAML(value: string): YAML
+```
+
+### Definition
+
+Référence : [Definition](https://github.com/syntax-tree/mdast#definition)
+
+Assertion de type :
+
+```typescript
+function assertDefinition(node: Node): asserts node is Definition
+```
+
+Contrôle de type :
+
+```typescript
+function isDefinition(node: Node): node is Definition
+```
+
+Création :
+
+```typescript
+function createDefinition(identifier: string, url: string, label?: string, title?: string): Definition
+function createDefinition(
+  identifier: string,
+  url: string,
+  options: { label?: string; title?: string }
+): Definition
+```
+
+### FootnoteDefinition
+
+Référence : [FootnoteDefinition](https://github.com/syntax-tree/mdast#footnotedefinition)
+
+Assertion de type :
+
+```typescript
+function assertFootnoteDefinition(node: Node): asserts node is FootnoteDefinition
+```
+
+Contrôle de type :
+
+```typescript
+function isFootnoteDefinition(node: Node): node is FootnoteDefinition
+```
+
+Création :
+
+```typescript
+function createFootnoteDefinition(
+  identifier: string,
+  label: string,
+  children?: BlockContent[]
+): FootnoteDefinition
+function createFootnoteDefinition(identifier: string, children?: BlockContent[]): FootnoteDefinition
+function createFootnoteDefinition(
+  identifier: string,
+  options: { label?: string },
+  children?: BlockContent[]
+): FootnoteDefinition
+```
+
+### Text
+
+Référence : [Text](https://github.com/syntax-tree/mdast#text)
+
+Assertion de type :
+
+```typescript
+function assertText(node: Node): asserts node is Text
+```
+
+Contrôle de type :
+
+```typescript
+function isText(node: Node): node is Text
+```
+
+Création :
+
+```typescript
+function createText(value: string): Text
+```
+
+### Emphasis
+
+Référence : [Emphasis](https://github.com/syntax-tree/mdast#emphasis)
+
+Assertion de type :
+
+```typescript
+function assertEmphasis(node: Node): asserts node is Emphasis
+```
+
+Contrôle de type :
+
+```typescript
+function isEmphasis(node: Node): node is Emphasis
+```
+
+Création :
+
+```typescript
+function createEmphasis(children?: PhrasingContent[]): Emphasis
+```
+
+### Strong
+
+Référence : [Strong](https://github.com/syntax-tree/mdast#strong)
+
+Assertion de type :
+
+```typescript
+function assertStrong(node: Node): asserts node is Strong
+```
+
+Contrôle de type :
+
+```typescript
+function isStrong(node: Node): node is Strong
+```
+
+Création :
+
+```typescript
+function createStrong(children?: PhrasingContent[]): Strong
+```
+
+### Delete
+
+Référence : [Delete](https://github.com/syntax-tree/mdast#delete)
+
+Assertion de type :
+
+```typescript
+function assertDelete(node: Node): asserts node is Delete
+```
+
+Contrôle de type :
+
+```typescript
+function isDelete(node: Node): node is Delete
+```
+
+Création :
+
+```typescript
+function createDelete(children?: PhrasingContent[]): Delete
+```
+
+### InlineCode
+
+Référence : [InlineCode](https://github.com/syntax-tree/mdast#inlinecode)
+
+Assertion de type :
+
+```typescript
+function assertInlineCode(node: Node): asserts node is InlineCode
+```
+
+Contrôle de type :
+
+```typescript
+function isInlineCode(node: Node): node is InlineCode
+```
+
+Création :
+
+```typescript
+function createInlineCode(value: string): InlineCode
+```
+
+### Break
+
+Référence : [Break](https://github.com/syntax-tree/mdast#break)
+
+Assertion de type :
+
+```typescript
+function assertBreak(node: Node): asserts node is Break
+```
+
+Contrôle de type :
+
+```typescript
+function isBreak(node: Node): node is Break
+```
+
+Création :
+
+```typescript
+function createBreak(): Break
+```
+
+### Link
+
+Référence : [Link](https://github.com/syntax-tree/mdast#link)
+
+Assertion de type :
+
+```typescript
+function assertLink(node: Node): asserts node is Link
+```
+
+Contrôle de type :
+
+```typescript
+function isLink(node: Node): node is Link
+```
+
+Création :
+
+```typescript
+function createLink(url: string, title: string, children?: StaticPhrasingContent[]): Link
+function createLink(url: string, children?: StaticPhrasingContent[]): Link
+function createLink(url: string, options: { title?: string }, children?: StaticPhrasingContent[]): Link
+```
+
+### Image
+
+Référence : [Image](https://github.com/syntax-tree/mdast#image)
+
+Assertion de type :
+
+```typescript
+function assertImage(node: Node): asserts node is Image
+```
+
+Contrôle de type :
+
+```typescript
+function isImage(node: Node): node is Image
+```
+
+Création :
+
+```typescript
+function createImage(url: string, alt?: string, title?: string): Image
+function createImage(url: string, options: { alt?: string; title?: string }): Image
+```
+
+### LinkReference
+
+Référence : [LinkReference](https://github.com/syntax-tree/mdast#linkreference)
+
+Assertion de type :
+
+```typescript
+function assertLinkReference(node: Node): asserts node is LinkReference
+```
+
+Contrôle de type :
+
+```typescript
+function isLinkReference(node: Node): node is LinkReference
+```
+
+Création :
+
+```typescript
+function createLinkReference(
+  identifier: string,
+  referenceType: ReferenceType,
+  label: string,
+  children?: StaticPhrasingContent[]
+): LinkReference
+function createLinkReference(
+  identifier: string,
+  referenceType: ReferenceType,
+  children?: StaticPhrasingContent[]
+): LinkReference
+function createLinkReference(
+  identifier: string,
+  referenceType: ReferenceType,
+  options: { label?: string },
+  children?: StaticPhrasingContent[]
+): LinkReference
+```
+
+### ImageReference
+
+Référence : [ImageReference](https://github.com/syntax-tree/mdast#imagereference)
+
+Assertion de type :
+
+```typescript
+function assertImageReference(node: Node): asserts node is ImageReference
+```
+
+Contrôle de type :
+
+```typescript
+function isImageReference(node: Node): node is ImageReference
+```
+
+Création :
+
+```typescript
+function createImageReference(
+  identifier: string,
+  referenceType: ReferenceType,
+  alt?: string,
+  label?: string
+): ImageReference
+function createImageReference(
+  identifier: string,
+  referenceType: ReferenceType,
+  options: { alt?: string; label?: string }
+): ImageReference
+```
+
+### Footnote
+
+Référence : [Footnote](https://github.com/syntax-tree/mdast#footnote)
+
+Assertion de type :
+
+```typescript
+function assertFootnote(node: Node): asserts node is Footnote
+```
+
+Contrôle de type :
+
+```typescript
+function isFootnote(node: Node): node is Footnote
+```
+
+Création :
+
+```typescript
+function createFootnote(children?: PhrasingContent[]): Footnote
+```
+
+### FootnoteReference
+
+Référence : [FootnoteReference](https://github.com/syntax-tree/mdast#footnotereference)
+
+Assertion de type :
+
+```typescript
+function assertFootnoteReference(node: Node): asserts node is FootnoteReference
+```
+
+Contrôle de type :
+
+```typescript
+function isFootnoteReference(node: Node): node is FootnoteReference
+```
+
+Création :
+
+```typescript
+function createFootnoteReference(identifier: string, label?: string): FootnoteReference
+function createFootnoteReference(identifier: string, options: { label?: string }): FootnoteReference
+```
+
 # Contribuer
 
 Bien que nous ne puissions pas garantir un temps de réponse, n’hésitez pas à ouvrir un incident si vous avez une question ou un problème pour utiliser ce paquet.

@@ -98,12 +98,12 @@ describe('List', () => {
   })
 
   it('should create simple node, children defined later', function() {
-    const listItem = createList()
-    listItem.children.push(...children())
+    const list = createList()
+    list.children.push(...children())
     expect(
       unified()
         .use(stringify)
-        .stringify(listItem)
+        .stringify(list)
     ).to.equal(`-   ${ep1}\n-   ${ep2}\n-   ${ep3}`)
   })
 
