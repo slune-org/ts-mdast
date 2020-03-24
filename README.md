@@ -620,6 +620,44 @@ function createImage(url: string, alt?: string, title?: string): Image
 function createImage(url: string, options: { alt?: string; title?: string }): Image
 ```
 
+### LinkReference
+
+Reference: [LinkReference](https://github.com/syntax-tree/mdast#linkreference)
+
+Type assertion:
+
+```typescript
+function assertLinkReference(node: Node): asserts node is LinkReference
+```
+
+Type guard:
+
+```typescript
+function isLinkReference(node: Node): node is LinkReference
+```
+
+Creation:
+
+```typescript
+function createLinkReference(
+  identifier: string,
+  referenceType: ReferenceType,
+  label: string,
+  children?: StaticPhrasingContent[]
+): LinkReference
+function createLinkReference(
+  identifier: string,
+  referenceType: ReferenceType,
+  children?: StaticPhrasingContent[]
+): LinkReference
+function createLinkReference(
+  identifier: string,
+  referenceType: ReferenceType,
+  options: { label?: string },
+  children?: StaticPhrasingContent[]
+): LinkReference
+```
+
 # Contributing
 
 Even though we cannot guarantee a response time, please feel free to file an issue if you have any question or problem using the package.
