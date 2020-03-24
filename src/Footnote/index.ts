@@ -1,1 +1,1 @@
-export { createFootnote, isFootnote } from './Footnote'
+export { assertFootnote, createFootnote, isFootnote } from './Footnote'

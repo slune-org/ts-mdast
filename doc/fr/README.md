@@ -682,6 +682,28 @@ function createImageReference(
 ): ImageReference
 ```
 
+### Footnote
+
+Référence : [Footnote](https://github.com/syntax-tree/mdast#footnote)
+
+Assertion de type :
+
+```typescript
+function assertFootnote(node: Node): asserts node is Footnote
+```
+
+Contrôle de type :
+
+```typescript
+function isFootnote(node: Node): node is Footnote
+```
+
+Création :
+
+```typescript
+function createFootnote(children?: PhrasingContent[]): Footnote
+```
+
 # Contribuer
 
 Bien que nous ne puissions pas garantir un temps de réponse, n’hésitez pas à ouvrir un incident si vous avez une question ou un problème pour utiliser ce paquet.
