@@ -551,6 +551,28 @@ Creation:
 function createInlineCode(value: string): InlineCode
 ```
 
+### Break
+
+Reference: [Break](https://github.com/syntax-tree/mdast#break)
+
+Type assertion:
+
+```typescript
+function assertBreak(node: Node): asserts node is Break
+```
+
+Type guard:
+
+```typescript
+function isBreak(node: Node): node is Break
+```
+
+Creation:
+
+```typescript
+function createBreak(): Break
+```
+
 # Contributing
 
 Even though we cannot guarantee a response time, please feel free to file an issue if you have any question or problem using the package.
