@@ -70,7 +70,17 @@ TODO
 
 Référence : [Literal](https://github.com/syntax-tree/mdast#literal)
 
-TODO
+Assertion de type :
+
+```typescript
+function assertLiteral(node: Node): asserts node is Literal
+```
+
+Contrôle de type :
+
+```typescript
+function isLiteral(node: Node): node is Literal
+```
 
 ### Content
 
