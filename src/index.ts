@@ -16,6 +16,7 @@ export {
   isFootnoteDefinition,
 } from './FootnoteDefinition'
 export { assertFootnoteReference, createFootnoteReference, isFootnoteReference } from './FootnoteReference'
+export { assertFrontmatterContent, isFrontmatterContent } from './FrontmatterContent'
 export { assertHeading, createHeading, isHeading } from './Heading'
 export { assertHTML, createHTML, isHTML } from './HTML'
 export { assertImage, createImage, isImage } from './Image'

@@ -80,6 +80,22 @@ Reference: [Literal](https://github.com/syntax-tree/mdast#literal)
 
 TODO
 
+### FrontmatterContent
+
+Reference: [FrontmatterContent](https://github.com/syntax-tree/mdast#frontmattercontent)
+
+Type assertion:
+
+```typescript
+function assertFrontmatterContent(node: Node): asserts node is FrontmatterContent
+```
+
+Type guard:
+
+```typescript
+function isFrontmatterContent(node: Node): node is FrontmatterContent
+```
+
 ### DefinitionContent
 
 Reference: [DefinitionContent](https://github.com/syntax-tree/mdast#definitioncontent)
