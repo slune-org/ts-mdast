@@ -529,6 +529,28 @@ Creation:
 function createDelete(children?: PhrasingContent[]): Delete
 ```
 
+### InlineCode
+
+Reference: [InlineCode](https://github.com/syntax-tree/mdast#inlinecode)
+
+Type assertion:
+
+```typescript
+function assertInlineCode(node: Node): asserts node is InlineCode
+```
+
+Type guard:
+
+```typescript
+function isInlineCode(node: Node): node is InlineCode
+```
+
+Creation:
+
+```typescript
+function createInlineCode(value: string): InlineCode
+```
+
 # Contributing
 
 Even though we cannot guarantee a response time, please feel free to file an issue if you have any question or problem using the package.

@@ -17,6 +17,7 @@ export {
 export { assertEmphasis, createEmphasis, isEmphasis } from './Emphasis'
 export { assertHeading, createHeading, isHeading } from './Heading'
 export { assertHTML, createHTML, isHTML } from './HTML'
+export { assertInlineCode, createInlineCode, isInlineCode } from './InlineCode'
 export { assertList, createList, isList } from './List'
 export { assertListItem, createListItem, isListItem } from './ListItem'
 export { assertParagraph, createParagraph, isParagraph } from './Paragraph'
