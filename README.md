@@ -80,6 +80,22 @@ Reference: [Literal](https://github.com/syntax-tree/mdast#literal)
 
 TODO
 
+### TopLevelContent
+
+Reference: [TopLevelContent](https://github.com/syntax-tree/mdast#toplevelcontent)
+
+Type assertion:
+
+```typescript
+function assertTopLevelContent(node: Node): asserts node is TopLevelContent
+```
+
+Type guard:
+
+```typescript
+function isTopLevelContent(node: Node): node is TopLevelContent
+```
+
 ### BlockContent
 
 Reference: [BlockContent](https://github.com/syntax-tree/mdast#blockcontent)
