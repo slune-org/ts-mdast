@@ -2,6 +2,7 @@
 export { Parent as UnistParent, Literal as UnistLiteral, Node } from 'unist'
 export * from 'mdast'
 
+export { assertBlockContent, isBlockContent } from './BlockContent'
 export { assertBlockquote, createBlockquote, isBlockquote } from './Blockquote'
 export { assertBreak, createBreak, isBreak } from './Break'
 export { assertCode, createCode, isCode } from './Code'

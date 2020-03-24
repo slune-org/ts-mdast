@@ -72,6 +72,22 @@ Référence : [Literal](https://github.com/syntax-tree/mdast#literal)
 
 TODO
 
+### BlockContent
+
+Référence : [BlockContent](https://github.com/syntax-tree/mdast#blockcontent)
+
+Assertion de type :
+
+```typescript
+function assertBlockContent(node: Node): asserts node is BlockContent
+```
+
+Contrôle de type :
+
+```typescript
+function isBlockContent(node: Node): node is BlockContent
+```
+
 ### FrontmatterContent
 
 Référence : [FrontmatterContent](https://github.com/syntax-tree/mdast#frontmattercontent)
