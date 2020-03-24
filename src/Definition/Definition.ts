@@ -11,7 +11,7 @@ interface Options {
  * @param url - URL to the referenced resource.
  * @param label - The original value of the normalized identifier field.
  * @param title - Advisory information for the resource.
- * @returns The text.
+ * @returns The definition.
  */
 export function createDefinition(
   identifier: string,
@@ -24,7 +24,7 @@ export function createDefinition(
  * @param identifier - Identifier of the definition, can match an identifier field on another node.
  * @param url - URL to the referenced resource.
  * @param options - The options of the definition.
- * @returns The text.
+ * @returns The definition.
  */
 export function createDefinition(identifier: string, url: string, options: Options): Definition
 

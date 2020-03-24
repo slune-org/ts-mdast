@@ -565,6 +565,30 @@ Création :
 function createBreak(): Break
 ```
 
+### Link
+
+Référence : [Link](https://github.com/syntax-tree/mdast#link)
+
+Assertion de type :
+
+```typescript
+function assertLink(node: Node): asserts node is Link
+```
+
+Contrôle de type :
+
+```typescript
+function isLink(node: Node): node is Link
+```
+
+Création :
+
+```typescript
+function createLink(url: string, title: string, children?: StaticPhrasingContent[]): Link
+function createLink(url: string, children?: StaticPhrasingContent[]): Link
+function createLink(url: string, options: Options, children?: StaticPhrasingContent[]): Link
+```
+
 # Contribuer
 
 Bien que nous ne puissions pas garantir un temps de réponse, n’hésitez pas à ouvrir un incident si vous avez une question ou un problème pour utiliser ce paquet.
