@@ -72,7 +72,17 @@ children.push(createNodeType(mandatory1, mandatory2))
 
 Reference: [Parent](https://github.com/syntax-tree/mdast#parent)
 
-TODO
+Type assertion:
+
+```typescript
+function assertParent(node: Node): asserts node is Parent
+```
+
+Type guard:
+
+```typescript
+function isParent(node: Node): node is Parent
+```
 
 ### Literal
 

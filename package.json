@@ -69,7 +69,7 @@
     "nyc": "15.0.0",
     "onchange": "6.1.0",
     "pm-exec": "1.0.0",
-    "prettier": "2.0.1",
+    "prettier": "2.0.2",
     "remark-frontmatter": "1.3.3",
     "remark-parse": "7.0.2",
     "remark-stringify": "7.0.4",
