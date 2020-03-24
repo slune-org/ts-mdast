@@ -72,13 +72,193 @@ children.push(createNodeType(mandatory1, mandatory2))
 
 Reference: [Parent](https://github.com/syntax-tree/mdast#parent)
 
-TODO
+Type assertion:
+
+```typescript
+function assertParent(node: Node): asserts node is Parent
+```
+
+Type guard:
+
+```typescript
+function isParent(node: Node): node is Parent
+```
 
 ### Literal
 
 Reference: [Literal](https://github.com/syntax-tree/mdast#literal)
 
-TODO
+Type assertion:
+
+```typescript
+function assertLiteral(node: Node): asserts node is Literal
+```
+
+Type guard:
+
+```typescript
+function isLiteral(node: Node): node is Literal
+```
+
+### Content
+
+Reference: [Content](https://github.com/syntax-tree/mdast#content)
+
+Type assertion:
+
+```typescript
+function assertContent(node: Node): asserts node is Content
+```
+
+Type guard:
+
+```typescript
+function isContent(node: Node): node is Content
+```
+
+### TopLevelContent
+
+Reference: [TopLevelContent](https://github.com/syntax-tree/mdast#toplevelcontent)
+
+Type assertion:
+
+```typescript
+function assertTopLevelContent(node: Node): asserts node is TopLevelContent
+```
+
+Type guard:
+
+```typescript
+function isTopLevelContent(node: Node): node is TopLevelContent
+```
+
+### BlockContent
+
+Reference: [BlockContent](https://github.com/syntax-tree/mdast#blockcontent)
+
+Type assertion:
+
+```typescript
+function assertBlockContent(node: Node): asserts node is BlockContent
+```
+
+Type guard:
+
+```typescript
+function isBlockContent(node: Node): node is BlockContent
+```
+
+### FrontmatterContent
+
+Reference: [FrontmatterContent](https://github.com/syntax-tree/mdast#frontmattercontent)
+
+Type assertion:
+
+```typescript
+function assertFrontmatterContent(node: Node): asserts node is FrontmatterContent
+```
+
+Type guard:
+
+```typescript
+function isFrontmatterContent(node: Node): node is FrontmatterContent
+```
+
+### DefinitionContent
+
+Reference: [DefinitionContent](https://github.com/syntax-tree/mdast#definitioncontent)
+
+Type assertion:
+
+```typescript
+function assertDefinitionContent(node: Node): asserts node is DefinitionContent
+```
+
+Type guard:
+
+```typescript
+function isDefinitionContent(node: Node): node is DefinitionContent
+```
+
+### ListContent
+
+Reference: [ListContent](https://github.com/syntax-tree/mdast#listcontent)
+
+Type assertion:
+
+```typescript
+function assertListContent(node: Node): asserts node is ListContent
+```
+
+Type guard:
+
+```typescript
+function isListContent(node: Node): node is ListContent
+```
+
+### TableContent
+
+Reference: [TableContent](https://github.com/syntax-tree/mdast#tablecontent)
+
+Type assertion:
+
+```typescript
+function assertTableContent(node: Node): asserts node is TableContent
+```
+
+Type guard:
+
+```typescript
+function isTableContent(node: Node): node is TableContent
+```
+
+### RowContent
+
+Reference: [RowContent](https://github.com/syntax-tree/mdast#rowcontent)
+
+Type assertion:
+
+```typescript
+function assertRowContent(node: Node): asserts node is RowContent
+```
+
+Type guard:
+
+```typescript
+function isRowContent(node: Node): node is RowContent
+```
+
+### PhrasingContent
+
+Reference: [PhrasingContent](https://github.com/syntax-tree/mdast#phrasingcontent)
+
+Type assertion:
+
+```typescript
+function assertPhrasingContent(node: Node): asserts node is PhrasingContent
+```
+
+Type guard:
+
+```typescript
+function isPhrasingContent(node: Node): node is PhrasingContent
+```
+
+### StaticPhrasingContent
+
+Reference: [StaticPhrasingContent](https://github.com/syntax-tree/mdast#staticphrasingcontent)
+
+Type assertion:
+
+```typescript
+function assertStaticPhrasingContent(node: Node): asserts node is StaticPhrasingContent
+```
+
+Type guard:
+
+```typescript
+function isStaticPhrasingContent(node: Node): node is StaticPhrasingContent
+```
 
 ### Root
 
