@@ -586,7 +586,30 @@ Création :
 ```typescript
 function createLink(url: string, title: string, children?: StaticPhrasingContent[]): Link
 function createLink(url: string, children?: StaticPhrasingContent[]): Link
-function createLink(url: string, options: Options, children?: StaticPhrasingContent[]): Link
+function createLink(url: string, options: { title?: string }, children?: StaticPhrasingContent[]): Link
+```
+
+### Image
+
+Référence : [Image](https://github.com/syntax-tree/mdast#image)
+
+Assertion de type :
+
+```typescript
+function assertImage(node: Node): asserts node is Image
+```
+
+Contrôle de type :
+
+```typescript
+function isImage(node: Node): node is Image
+```
+
+Création :
+
+```typescript
+function createImage(url: string, alt?: string, title?: string): Image
+function createImage(url: string, options: { alt?: string; title?: string }): Image
 ```
 
 # Contribuer
