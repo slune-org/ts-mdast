@@ -72,6 +72,22 @@ Référence : [Literal](https://github.com/syntax-tree/mdast#literal)
 
 TODO
 
+### DefinitionContent
+
+Référence : [DefinitionContent](https://github.com/syntax-tree/mdast#definitioncontent)
+
+Assertion de type :
+
+```typescript
+function assertDefinitionContent(node: Node): asserts node is DefinitionContent
+```
+
+Contrôle de type :
+
+```typescript
+function isDefinitionContent(node: Node): node is DefinitionContent
+```
+
 ### ListContent
 
 Référence : [ListContent](https://github.com/syntax-tree/mdast#listcontent)
