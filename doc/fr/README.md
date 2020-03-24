@@ -72,6 +72,22 @@ Référence : [Literal](https://github.com/syntax-tree/mdast#literal)
 
 TODO
 
+### TableContent
+
+Référence : [TableContent](https://github.com/syntax-tree/mdast#tablecontent)
+
+Assertion de type :
+
+```typescript
+function assertTableContent(node: Node): asserts node is TableContent
+```
+
+Contrôle de type :
+
+```typescript
+function isTableContent(node: Node): node is TableContent
+```
+
 ### RowContent
 
 Référence : [RowContent](https://github.com/syntax-tree/mdast#rowcontent)

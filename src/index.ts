@@ -32,6 +32,7 @@ export { assertStaticPhrasingContent, isStaticPhrasingContent } from './StaticPh
 export { assertStrong, createStrong, isStrong } from './Strong'
 export { assertTable, createTable, isTable } from './Table'
 export { assertTableCell, createTableCell, isTableCell } from './TableCell'
+export { assertTableContent, isTableContent } from './TableContent'
 export { assertTableRow, createTableRow, isTableRow } from './TableRow'
 export { assertText, createText, isText } from './Text'
 export { assertThematicBreak, createThematicBreak, isThematicBreak } from './ThematicBreak'
