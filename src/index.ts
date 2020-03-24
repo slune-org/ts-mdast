@@ -2,20 +2,19 @@
 export { Parent as UnistParent, Literal as UnistLiteral, Node } from 'unist'
 export * from 'mdast'
 
-export { createFootnoteReference, isFootnoteReference } from './FootnoteReference'
-
 export { assertBlockquote, createBlockquote, isBlockquote } from './Blockquote'
 export { assertBreak, createBreak, isBreak } from './Break'
 export { assertCode, createCode, isCode } from './Code'
 export { assertDefinition, createDefinition, isDefinition } from './Definition'
 export { assertDelete, createDelete, isDelete } from './Delete'
+export { assertEmphasis, createEmphasis, isEmphasis } from './Emphasis'
+export { assertFootnote, createFootnote, isFootnote } from './Footnote'
 export {
   assertFootnoteDefinition,
   createFootnoteDefinition,
   isFootnoteDefinition,
 } from './FootnoteDefinition'
-export { assertEmphasis, createEmphasis, isEmphasis } from './Emphasis'
-export { assertFootnote, createFootnote, isFootnote } from './Footnote'
+export { assertFootnoteReference, createFootnoteReference, isFootnoteReference } from './FootnoteReference'
 export { assertHeading, createHeading, isHeading } from './Heading'
 export { assertHTML, createHTML, isHTML } from './HTML'
 export { assertImage, createImage, isImage } from './Image'

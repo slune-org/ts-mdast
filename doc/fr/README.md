@@ -704,6 +704,29 @@ Création :
 function createFootnote(children?: PhrasingContent[]): Footnote
 ```
 
+### FootnoteReference
+
+Référence : [FootnoteReference](https://github.com/syntax-tree/mdast#footnotereference)
+
+Assertion de type :
+
+```typescript
+function assertFootnoteReference(node: Node): asserts node is FootnoteReference
+```
+
+Contrôle de type :
+
+```typescript
+function isFootnoteReference(node: Node): node is FootnoteReference
+```
+
+Création :
+
+```typescript
+function createFootnoteReference(identifier: string, label?: string): FootnoteReference
+function createFootnoteReference(identifier: string, options: { label?: string }): FootnoteReference
+```
+
 # Contribuer
 
 Bien que nous ne puissions pas garantir un temps de réponse, n’hésitez pas à ouvrir un incident si vous avez une question ou un problème pour utiliser ce paquet.

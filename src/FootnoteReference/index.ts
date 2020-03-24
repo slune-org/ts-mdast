@@ -1,1 +1,1 @@
-export { createFootnoteReference, isFootnoteReference } from './FootnoteReference'
+export { assertFootnoteReference, createFootnoteReference, isFootnoteReference } from './FootnoteReference'

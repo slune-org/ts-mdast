@@ -11,7 +11,7 @@ interface Options {
  * @param referenceType - The reference type.
  * @param alt - The alternative text.
  * @param label - The original value of the normalized identifier field.
- * @returns The link reference.
+ * @returns The image reference.
  */
 export function createImageReference(
   identifier: string,
@@ -23,8 +23,8 @@ export function createImageReference(
 /**
  * @param identifier - The reference identifier.
  * @param referenceType - The reference type.
- * @param options - The options of the link reference.
- * @returns The link reference.
+ * @param options - The options of the image reference.
+ * @returns The image reference.
  */
 export function createImageReference(
   identifier: string,
